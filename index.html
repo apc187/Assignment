@@ -2,490 +2,517 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/input.css">
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </head>
 
-<body class="font-poppins">
-    <nav class="flex flex-row justify-between items-center border-b-2 border-gray-300 w-full px-16 py-10 h-[88px]">
-        <div class="flex items-center gap-12">
-            <a href="/">
-                <img src="./images/logo.svg" alt="Logo" class="w-[72px] h-[60px]">
-            </a>
-            <ul class="hidden xl:flex items-center gap-8 font-poppins">
-                <li><a href="#" class="text-[#333333] font-light">Banking</a></li>
-                <li><a href="#" class="text-[#333333] font-light">Bancassurance</a></li>
-                <li><a href="#" class="text-[#333333] font-light">Who we are</a></li>
-                <li><a href="#" class="text-[#333333] font-light">Promotions</a></li>
-                <li><a href="#" class="text-[#333333] font-light">News</a></li>
-            </ul>
+<body>
+  <nav
+    class="flex flex-row justify-between items-center border-b-2 border-gray-300 w-full px-4 md:px-16 py-4 h-[88px] bg-white">
+    <div class="flex items-center">
+      <a href="/">
+        <img src="./images/logo.svg" alt="Logo" class="w-[60px] h-[50px] md:w-[72px] md:h-[60px]">
+      </a>
+      <ul class="hidden xl:flex items-center gap-8 ml-12 font-bahnschrift font-normal">
+        <li><a href="#" class="text-[#333333] font-light">Banking</a></li>
+        <li><a href="#" class="text-[#333333] font-light">Bancassurance</a></li>
+        <li><a href="#" class="text-[#333333] font-light">Who we are</a></li>
+        <li><a href="#" class="text-[#333333] font-light">Promotions</a></li>
+        <li><a href="#" class="text-[#333333] font-light">News</a></li>
+      </ul>
+    </div>
+
+    <div class="flex items-center gap-3 md:gap-6">
+      <div class="hidden md:flex items-center gap-4 text-sm font-semibold text-gray-700">
+        <a href="#" class="hover:underline">EN</a>
+        <span class="text-gray-300">|</span>
+        <a href="#" class="hover:underline text-gray-400">MM</a>
+      </div>
+
+      <button class="text-gray-600 p-2">
+        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+      </button>
+
+      <button
+        class="px-5 py-2 bg-[#D71920] text-white font-semibold rounded-md hover:bg-[#C2171D] transition-all shadow-sm text-sm md:text-base">
+        Login
+      </button>
+
+      <button id="menu-btn" class="xl:hidden text-gray-800 p-2 focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu"
+    class="hidden absolute top-[88px] left-0 w-full bg-white shadow-xl z-50 border-t border-gray-100 xl:hidden">
+    <ul class="flex flex-col p-6 gap-6 font-bahnschrift text-lg">
+      <li><a href="#" class="text-gray-800 border-b border-gray-100 pb-2 block">Banking</a></li>
+      <li><a href="#" class="text-gray-800 border-b border-gray-100 pb-2 block">Bancassurance</a></li>
+      <li><a href="#" class="text-gray-800 border-b border-gray-100 pb-2 block">Who we are</a></li>
+      <li><a href="#" class="text-gray-800 border-b border-gray-100 pb-2 block">Promotions</a></li>
+      <li><a href="#" class="text-gray-800 border-b border-gray-100 pb-2 block">News</a></li>
+    </ul>
+  </div>
+
+  <main class="font-poppins">
+    <section class="lg:w-full flex justify-center bg-gray-100">
+      <div id="default-carousel" class="relative w-full md:h-[550px] overflow-hidden" data-carousel="slide"
+        data-carousel-interval="5000">
+        <div class="relative h-[180px] md:h-full overflow-hidden">
+          <div class="hidden duration-2000 w-full h-[180px] lg:w-full lg:h-full ease-in-out"
+            data-carousel-item="active">
+            <img src="./images/slider5.jpg" class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+              alt="Building" />
+          </div>
+          <div class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full" data-carousel-item>
+            <img src="./images/slider2.jpg" class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+              alt="Bridge" />
+          </div>
+          <div class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full" data-carousel-item>
+            <img src="./images/slider11.jpg"
+              class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center" alt="Bridge"/>
+          </div>
+          <div class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full" data-carousel-item>
+            <img src="./images/slider.jpg" class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+              alt="Bridge" />
+          </div>
+          <div class="hidden duration-2000 ease-in-out w-full h-[180px] lg:w-full lg:h-full" data-carousel-item>
+            <img src="./images/slider4.jpg" class="absolute block w-full h-[180px] md:w-full md:h-[550px] object-center"
+              alt="Bridge" />
+          </div>
         </div>
 
-        <div class="flex items-center gap-4">
-            <div class="flex items-center gap-4 text-sm font-semibold text-gray-700">
-                <a href="#" class="hover:underline">EN</a>
-                <span class="text-gray-300">|</span>
-                <a href="#" class="hover:underline text-gray-400">MM</a>
-            </div>
-            <button class="text-gray-600 ">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button
-                class="w-[100px] px-4 py-2 bg-[#D71920] text-white font-semibold rounded-sm hover:bg-blue-700 transition-all shadow-sm">
-                Login
-            </button>
+        <div class="absolute z-30 flex flex-col items-center -translate-y-1/2 right-4 md:right-10 top-1/2 space-y-2.5">
+          <button type="button" class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-white"
+            aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+          <button type="button"
+            class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+            aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+          <button type="button"
+            class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+            aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          <button type="button"
+            class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+            aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+          <button type="button"
+            class="w-2 h-2 md:w-3 md:h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
+            aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
         </div>
-    </nav>
-
-    <main class="w-full flex justify-center bg-gray-100">
-        <div id="default-carousel" class="relative w-full h-[550px] overflow-hidden" data-carousel="slide"
-            data-carousel-interval="5000">
-            <div class="relative h-full overflow-hidden">
-                <div class="hidden duration-[1500ms] ease-in-out" data-carousel-item>
-                    <img src="./images/slider1.jpg" class="absolute block w-full h-full object-cover" alt="Building" />
-                </div>
-
-                <div class="hidden duration-[1500ms] ease-in-out" data-carousel-item>
-                    <img src="./images/slider2.jpg" class="absolute block w-full h-full object-cover" alt="Bridge" />
-                    <div class="absolute inset-0 flex items-center px-24 bg-black/5">
-                        <h1 class="text-6xl text-black font-bahnschrift">
-                            Welcome to MTB
-                        </h1>
-                    </div>
-                </div>
-                <div class="hidden duration-1500 ease-in-out" data-carousel-item>
-                    <img src="./images/slider4.jpg" class="absolute block w-full h-full object-cover" alt="Bridge" />
-                </div>
-                <div class="hidden duration-[1500ms] ease-in-out" data-carousel-item>
-                    <img src="./images/slider10.jpg" class="absolute block w-full h-full object-cover" alt="Bridge" />
-                </div>
-                <div class="hidden duration-[1500ms] ease-in-out" data-carousel-item>
-                    <img src="./images/slider11.jpg" class="absolute block w-full h-full object-cover" alt="Bridge" />
-                </div>
-            </div>
-
-            <div class="absolute z-30 flex flex-col -translate-y-1/2 right-10 top-1/2 space-y-4">
-                <button type="button" class="w-3 h-3 rounded-full border-2 border-white bg-white" aria-current="true"
-                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button"
-                    class="w-3 h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
-                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button"
-                    class="w-3 h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
-                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button"
-                    class="w-3 h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
-                    aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button"
-                    class="w-3 h-3 rounded-full border-2 border-white bg-transparent hover:bg-white/50"
-                    aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-            </div>
-        </div>
-    </main>
-    <section class="bg-gray-50 py-10 px-8">
-        <div class="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="flex flex-col gap-6">
-                <div
-                    class="bg-white rounded-sm shadow-sm overflow-hidden flex flex-col sm:flex-row h-full border border-gray-100">
-                    <div class="w-1/2">
-                        <img src="./images/slider9.jpg" alt="Saving"
-                            class="w-[320px] h-[230px] object-cover px-4 py-4" />
-                    </div>
-                    <div class="p-5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl items-start font-bold mb-4 text-gray-800">
-                                Saving Deposit
-                            </h3>
-                            <ul class="space-y-5">
-                                <li class="flex items-center gap-2 text-sm text-gray-600">
-                                    <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                    <span>Earn compound interest on deposit.</span>
-                                </li>
-                                <li class="flex items-center gap-2 text-sm text-gray-600">
-                                    <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                    <span>Eligible for ATM/ debit Card, mobile banking.</span>
-                                </li>
-                                <li class="flex items-center gap-2 text-sm text-gray-600">
-                                    <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                    <span>Convenient and reliable for payments</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="font-bold text-[#00984A] font-normal flex items-center mt-4 gap-1">
-                                More Detail <img src="./images/Vector.svg" alt="vector" class="pl-1">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-sm shadow-sm overflow-hidden flex flex-col sm:flex-row h-full border border-gray-100">
-                    <div class="w-1/2">
-                        <img src="./images/slider12.jpg" alt="Call Deposit"
-                            class="w-[300px] h-[230px] object-cover px-4 py-4" />
-                    </div>
-                    <div class=" sm:w-1/2 flex flex-col">
-                        <h3 class="text-xl font-bold mt-4 text-gray-800">Call Deposit</h3>
-                        <ul class="space-y-3 pt-4">
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Earn interest on your daily balance.</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Convenient & reliable for regular payments</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Can transfer money from account to account.</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="mt-4 text-[#00984A] font-bold font-normal flex items-center gap-1">
-                            More Detail<img src="./images/Vector.svg" alt="vector" class="pl-1">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div
-                    class="bg-white rounded-sm shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full p-5">
-                    <div class="h-50% overflow-hidden">
-                        <img src="./images/slider6.jpg" alt="MPU Card" class="max-w-[320px] object-cover" />
-                    </div>
-                    <div class="py-5 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-800 pb-5">
-                            MTB MPU Debit Card
-                        </h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Earn compound interest on deposit.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Eligible for ATM/ debit Card, mobile banking.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Convenient and reliable for payments</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="mt-6 text-[#00984A] font-bold font-normal flex items-center gap-1">
-                            More Detail <img src="./images/Vector.svg" alt="vector" class="pl-1">
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-sm shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full p-5">
-                    <div class="h-50% overflow-hidden">
-                        <img src="./images/slider7.jpg" alt="Travel" class="w-[320px] h-[230px] object-cover" />
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-800 mb-5 pt-5">Travel Laon</h3>
-                        <div class="mb-4">
-                            <span class="bg-[#E0E7FF] text-[#4F46E5] text-sm font-bold px-2.5 py-1 rounded">Shorten
-                                Laon</span>
-                        </div>
-                        <ul class="space-y-4 flex-grow font-sm">
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Earn compound interest on deposit.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Eligible for ATM/ debit Card, mobile banking.</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-sm text-gray-600">
-                                <img src="./images/icons.svg" class="w-4 h-4 mt-1" />
-                                <span>Convenient and reliable for payments</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="mt-6 text-[#00984A] font-bold font-normal flex items-center gap-1">
-                            More Detail <img src="./images/Vector.svg" alt="vector" class="pl-1">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
-    <section class="bg-slate-50">
-        <div class="mb-8">
-            <span class="text-4xl ml-10 font-minibold">Rates & Others</span>
+  </main>
+  <section class="max-w-[1440px] mx-auto py-10 px-4 md:px-8 bg-[#f5f5f5] font-poppins text-[#444444]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4">
+      <div class="flex flex-col gap-8 md:gap-4">
+        <div class="bg-surface rounded-lg p-4 shadow-sm flex flex-col sm:flex-row h-full gap-5 md:gap-6 items-center">
+          <div class="sm:w-1/2 h-57.5 shrink-0">
+            <img src="./images/slider9.jpg" class="w-full h-full object-cover" alt="Saving" />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="font-poppins font-medium text-[#000000] text-[18px] md:text-[20px] mb-5">
+                Saving Deposit
+              </h3>
+              <ul class="space-y-2.5">
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Earn compound interest on deposit.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Eligible for ATM/ debit Card, mobile banking.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Convenient and reliable for payments.
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="text-[#00984A] text-[15px] flex items-center hover:underline transition-all">More Detail
+              <img src="./images/Vector.svg" class="w-4 h-4 pl-2" alt="right arrow" /></a>
+          </div>
         </div>
-        <div class="w-full grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-2 gap-4 px-6 py-6">
-            <div class="rounded-xl shadow-sm bg-[#FFFFFF] p-8">
-                <div class="flex flex-col gap-6 mb-6">
-                    <h1 class="text-[24px] lg:text-[28px]">Currency Exchange Rate</h1>
-                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2">
-                        <span class="text-gray-400 text-sm">last updated on</span>
-                        <span class="text-sm font-medium">9 May 2024, 10:24 am</span>
-                    </div>
-                </div>
 
-                <div class="flex flex-col gap-8">
-                    <div class="flex items-center justify-between py-2">
-                        <div class="flex items-center gap-4">
-                            <img src="./images/usa.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
-                            <span class="font-medium">USA</span>
-                        </div>
-
-                        <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Buy</span>
-                                <span>3,315 MMK</span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Sell</span>
-                                <span>3,324 MMK</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-2">
-                        <div class="flex items-center gap-4">
-                            <img src="./images/eur.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
-                            <span class="font-medium">EUR</span>
-                        </div>
-
-                        <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Buy</span>
-                                <span>3,315 MMK</span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Sell</span>
-                                <span>3,324 MMK</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-2">
-                        <div class="flex items-center gap-4">
-                            <img src="./images/sgd.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
-                            <span class="font-medium">SGD</span>
-                        </div>
-
-                        <div class="flex flex-col items-center lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px] ">
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Buy</span>
-                                <span>3,315 MMK</span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Sell</span>
-                                <span>3,324 MMK</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-2">
-                        <div class="flex items-center gap-4">
-                            <img src="./images/thb.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
-                            <span class="font-medium">THB</span>
-                        </div>
-
-                        <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Buy</span>
-                                <span>3,315 MMK</span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <span class="text-gray-400">Sell</span>
-                                <span>3,324 MMK</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="bg-surface rounded-lg p-4 shadow-sm flex flex-col sm:flex-row h-full gap-5 md:gap-6 items-center">
+          <div class="sm:w-1/2 h-57.5 shrink-0">
+            <img src="./images/slider12.jpg" class="w-full h-full object-cover" alt="Call Deposit" />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="font-poppins font-medium text-[#000000] text-[18px] md:text-[20px] mb-5">
+                Call Deposit
+              </h3>
+              <ul class="space-y-2.5">
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Earn interest on your daily balance.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Convenient & reliable for regular payments.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Can transfer money from account to account.
+                </li>
+              </ul>
             </div>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 self-end w-full">
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/moneybag.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Open an Account</span>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/travel.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Get a Travel Loan</span>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/calculator.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Loan Calculator</span>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/card.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Apply MPU Card</span>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/bank.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Our Branches</span>
-                </div>
-
-                <div
-                    class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
-                    <img src="./images/contact.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
-                    <span class="text-sm text-center">Contact Us</span>
-                </div>
-            </div>
+            <a href="#" class="text-[#00984A] text-[15px] flex items-center hover:underline transition-all">More Detail
+              <img src="./images/Vector.svg" class="w-4 h-4 pl-2" alt="right arrow" /></a>
+          </div>
         </div>
-    </section>
+      </div>
 
-
-    <section class="bg-[#0b2760] text-white pt-16 pb-10 px-8">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-6 lg:gap-12 mb-16">
-            <div class="col-span-1 lg:col-span-2">
-                <h4 class="font-bold text-lg mb-6">Contact Us</h4>
-                <div class="space-y-5 text-sm mb-8">
-                    <div class="flex items-start gap-3">
-                        <img src="./images/mail.svg" class="w-5 h-5 mt-0.5" />
-                        <a href="mailto:info@innovix-bank.com" class="hover:underline">info@innovix-bank.com</a>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <img src="./images/map.svg" class="w-5 h-5 mt-0.5" />
-                        <p>Building 10, 5th Floor, MICT Park, Hlaing Township, Yangon.</p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <img src="./images/phone.svg" class="w-5 h-5 mt-0.5" />
-                        <p>+959 123456789</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 justify-start">
-                    <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
-                        <img src="./images/facebook.svg" class="w-6 h-6 object-contain " alt="Facebook" />
-                    </a>
-
-                    <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
-                        <img src="./images/linkin.svg" class="w-6 h-6 object-contain" alt="LinkedIn" />
-                    </a>
-
-                    <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white ">
-                        <img src="./images/ig.svg" class="w-6 h-6 object-contain" alt="Instagram" />
-                    </a>
-
-                    <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
-                        <img src="./images/viber.svg" class="w-6 h-6 object-contain " alt="Viber" />
-                    </a>
-                </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-4">
+        <div class="bg-surface rounded-lg p-4 shadow-sm flex flex-col h-full gap-5 items-center">
+          <div class="h-53.5 shrink-0">
+            <img src="./images/slider6.jpg" class="w-full h-full object-cover" alt="Debit Card" />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="font-poppins font-medium text-[#000000] text-[18px] md:text-[20px] mb-5">
+                MTB MPU Debit Card
+              </h3>
+              <ul class="space-y-2.5">
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Earn compound interest on deposit.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Eligible for ATM/ debit Card, mobile banking.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Convenient and reliable for payments.
+                </li>
+              </ul>
             </div>
-            <div class="col-span-2 lg:col-span-1">
-                <h4 class="font-bold text-lg mb-6">Personal Banking</h4>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Deposit</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Loans and Advances</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Remittance</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Bill Payment</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Bill Payment</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Bancassurance</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-span-2 lg:col-span-1">
-                <h4 class="font-bold text-lg mb-6">Busincess Banking</h4>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Deposit</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Loans and Advances</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Trade Services</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Treasury</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Payroll Services</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Afent Banking</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-span-2 lg:col-span-1">
-                <h4 class="font-bold text-lg mb-6">Personal Banking</h4>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">About MTB Bank</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">ATM & Branches</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Careers</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">News</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-span-2 lg:col-span-1">
-                <h4 class="font-bold text-lg mb-6">Useful Links</h4>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-white transition-colors">FAQs</a>
-                    </li>
-                </ul>
-            </div>
+            <a href="#" class="text-[#00984A] text-[15px] flex items-center hover:underline transition-all">More Detail
+              <img src="./images/Vector.svg" class="w-4 h-4 pl-2" alt="right arrow" /></a>
+          </div>
         </div>
-    </section>
-    <footer>
-        <div class="bg-[#0E3178] border-t border-white/10 px-4 py-8 text-[#FFFFFF]">
-            <div class="flex flex-row items-center justify-center gap-4 w-full">
 
-                <span class="text-[12px] opacity-90">
-                    © 2024 Myanma Tourism Bank. All Rights Reserved.
-                </span>
-
-                <div class="flex flex-row flex-wrap justify-center items-center gap-6 text-[15px]">
-                    <a href="#" class="hover:underline transition-all">
-                        Terms & Conditions
-                    </a>
-                    <a href="#" class="hover:underline transition-all">
-                        Privacy Policies
-                    </a>
-                </div>
-
+        <div class="bg-surface rounded-lg p-4 shadow-sm flex flex-col h-full gap-5 items-center">
+          <div class="h-53.5 shrink-0">
+            <img src="./images/slider7.jpg" class="w-full h-full object-cover" alt="Travel" />
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="font-poppins font-medium text-[#000000] text-[18px] md:text-[20px] mb-3">
+                Travel Loan
+              </h3>
+              <span
+                class="inline-block bg-[#DEE2FE] text-[#0E3178] text-[11px] font-poppins font-medium px-1 py-0.5 rounded mb-5">Shorten
+                Loan</span>
+              <ul class="space-y-2.5">
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Earn compound interest on deposit.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Eligible for ATM/ debit Card, mobile banking.
+                </li>
+                <li class="flex items-start gap-3 text-[13px] text-primary-text font-poppins">
+                  <img src="./images/icons.svg" alt="checked" />
+                  Convenient and reliable for payments.
+                </li>
+              </ul>
             </div>
+            <a href="#" class="text-[#00984A] text-[15px] flex items-center hover:underline transition-all">More Detail
+              <img src="./images/Vector.svg" class="w-4 h-4 pl-2" alt="right arrow" /></a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-slate-50 font-poppins">
+    <div class="mb-8">
+      <span class="text-4xl ml-10 font-minibold">Rates & Others</span>
+    </div>
+    <div class="w-full grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-2 gap-4 px-6 py-6">
+      <div class="rounded-xl shadow-sm bg-[#FFFFFF] p-8">
+        <div class="flex flex-col gap-6 mb-6">
+          <h1 class="text-[24px] lg:text-[28px]">Currency Exchange Rate</h1>
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2">
+            <span class="text-gray-400 text-sm">last updated on</span>
+            <span class="text-sm font-medium">9 May 2024, 10:24 am</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8">
+          <div class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-4">
+              <img src="./images/usa.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
+              <span class="font-medium">USA</span>
+            </div>
+
+            <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Buy</span>
+                <span>3,315 MMK</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Sell</span>
+                <span>3,324 MMK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-4">
+              <img src="./images/eur.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
+              <span class="font-medium">EUR</span>
+            </div>
+
+            <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Buy</span>
+                <span>3,315 MMK</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Sell</span>
+                <span>3,324 MMK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-4">
+              <img src="./images/sgd.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
+              <span class="font-medium">SGD</span>
+            </div>
+
+            <div class="flex flex-col items-center lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px] ">
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Buy</span>
+                <span>3,315 MMK</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Sell</span>
+                <span>3,324 MMK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-4">
+              <img src="./images/thb.svg" class="w-8 h-8 rounded-full shadow-sm" alt="THB" />
+              <span class="font-medium">THB</span>
+            </div>
+
+            <div class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-34 text-[15px]">
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Buy</span>
+                <span>3,315 MMK</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-gray-400">Sell</span>
+                <span>3,324 MMK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 self-end w-full">
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/moneybag.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Open an Account</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/travel.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Get a Travel Loan</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/calculator.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Loan Calculator</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/card.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Apply MPU Card</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/bank.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Our Branches</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group">
+          <img src="./images/contact.svg" class="h-12 w-12 lg:w-16 lg:h-16 mb-2" />
+          <span class="text-sm text-center">Contact Us</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#0E3178] text-white pt-16 pb-10 px-8 font-poppins">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-6 lg:gap-12 mb-16">
+      <div class="col-span-1 lg:col-span-2">
+        <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+        <div class="space-y-5 text-sm mb-8">
+          <div class="flex items-start gap-3">
+            <img src="./images/mail.svg" class="w-5 h-5 mt-0.5" />
+            <a href="mailto:info@innovix-bank.com" class="hover:underline">info@innovix-bank.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <img src="./images/map.svg" class="w-5 h-5 mt-0.5" />
+            <p>Building 10, 5th Floor, MICT Park, Hlaing Township, Yangon.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <img src="./images/phone.svg" class="w-5 h-5 mt-0.5" />
+            <p>+959 123456789</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 justify-start">
+          <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
+            <img src="./images/facebook.svg" class="w-6 h-6 object-contain " alt="Facebook" />
+          </a>
+
+          <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
+            <img src="./images/linkin.svg" class="w-6 h-6 object-contain" alt="LinkedIn" />
+          </a>
+
+          <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white ">
+            <img src="./images/ig.svg" class="w-6 h-6 object-contain" alt="Instagram" />
+          </a>
+
+          <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center border border-white">
+            <img src="./images/viber.svg" class="w-6 h-6 object-contain " alt="Viber" />
+          </a>
+        </div>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <h4 class="font-bold text-medium mb-6">Personal Banking</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Deposit</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Loans and Advances</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Remittance</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Bill Payment</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Bill Payment</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Bancassurance</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <h4 class="font-bold text-medium mb-6">Busincess Banking</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Deposit</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Loans and Advances</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Trade Services</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Treasury</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Payroll Services</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Afent Banking</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <h4 class="font-bold text-medium mb-6">Personal Banking</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>
+            <a href="#" class="hover:text-white transition-colors">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">About MTB Bank</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">ATM & Branches</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Careers</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">News</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2 lg:col-span-1">
+        <h4 class="font-bold text-medium mb-6">Useful Links</h4>
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>
+            <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-white transition-colors">FAQs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer
+      class="bg-[#0b2760] text-[#ffffff] border-t border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 py-6">
+        <div
+          class="flex flex-col md:flex-row justify-center gap-3 md:gap-8 text-xs md:text-sm opacity-80"
+        >
+          <p class="md:order-1">
+            © 2024 Myanma Tourism Bank. All Rights Reserved.
+          </p>
+
+          <div class="hidden md:block h-4 w-px bg-white/20 order-2"></div>
+
+          <div class="flex gap-6 order-1 md:order-3 mb-2 md:mb-0">
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms & Conditions</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policies</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 </body>
 
